@@ -8,4 +8,4 @@
 *@return the fact of n 
 */
 int factorial(int n);
-#indif /*FACTORIAL_H*/
+#endif /*FACTORIAL_H*/

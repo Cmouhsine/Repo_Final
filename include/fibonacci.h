@@ -7,5 +7,5 @@
 *@param integer n
 *@return the fibonacci  num of n 
 */
-int fiboancci(int n);
-#indif /*FIBONACI_H*/
+int fibonacci(int n);
+#endif /*FIBONACI_H*/

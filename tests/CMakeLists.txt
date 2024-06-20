@@ -1,3 +1,4 @@
+include_directories(${PROJECT_SOURCE_DIR}/include)
 add_executable(test_fact test_factorial.cpp)
 target_link_libraries(test_fact MyProject)
 add_test(NAME FactTest COMMAND test_fact)

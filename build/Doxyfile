@@ -1,0 +1,8 @@
+PROJECT_NAME           = "MyProject"
+OUTPUT_DIRECTORY       = /Users/user/Desktop/tp/Repo_Final/docs
+INPUT                  = /Users/user/Desktop/tp/Repo_Final/include /Users/user/Desktop/tp/Repo_Final/src /Users/user/Desktop/tp/Repo_Final/main.cpp
+GENERATE_HTML          = YES
+CREATE_SUBDIRS         = YES
+RECURSIVE              = YES
+WARN_LOGFILE           = /Users/user/Desktop/tp/Repo_Final/logs/warn.logs
+USE_MDFILE_AS_MAINPAGE = /Users/user/Desktop/tp/Repo_Final/docs/mainpage.md

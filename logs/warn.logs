@@ -1,0 +1,13 @@
+warning: Specified markdown mainpage '/Users/user/Desktop/tp/Repo_Final/docs/mainpage.md' has not been defined as input file
+/Users/user/Desktop/tp/Repo_Final/include/example_classe.h:5: warning: the name 'example.h' supplied as the argument in the \file statement is not an input file
+/Users/user/Desktop/tp/Repo_Final/src/example_classe.cpp:2: warning: the name 'example_class.cpp' supplied as the argument in the \file statement is not an input file
+/Users/user/Desktop/tp/Repo_Final/src/fibonacci.cpp:3: warning: the name 'fiboanacci' supplied as the argument in the \file statement is not an input file
+/Users/user/Desktop/tp/Repo_Final/src/prime.cpp:4: warning: the name 'prisme.cpp' supplied as the argument in the \file statement is not an input file
+/Users/user/Desktop/tp/Repo_Final/include/example_classe.h:10: warning: Compound MyClass is not documented.
+/Users/user/Desktop/tp/Repo_Final/include/factorial.h:10: warning: Member factorial(int n) (function) of file factorial.h is not documented.
+/Users/user/Desktop/tp/Repo_Final/include/fibonacci.h:10: warning: Member fibonacci(int n) (function) of file fibonacci.h is not documented.
+/Users/user/Desktop/tp/Repo_Final/include/palindrome.h:12: warning: Member palindrome(const std::string &str) (function) of file palindrome.h is not documented.
+/Users/user/Desktop/tp/Repo_Final/include/prime.h:10: warning: Member prime(int n) (function) of file prime.h is not documented.
+/Users/user/Desktop/tp/Repo_Final/main.cpp:13: warning: Member main() (function) of file main.cpp is not documented.
+/Users/user/Desktop/tp/Repo_Final/src/factorial.cpp:6: warning: Member factorial(int n) (function) of file factorial.cpp is not documented.
+/Users/user/Desktop/tp/Repo_Final/src/palindrome.cpp:6: warning: Member palindrome(const std::string &str) (function) of file palindrome.cpp is not documented.

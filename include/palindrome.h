@@ -1,5 +1,7 @@
 #ifndef PALINDROME_H
 #define PALINDROME_H
+
+#include <string>
 using namespace std;
 /**
 *@file palindrome.h
@@ -7,5 +9,5 @@ using namespace std;
 *@param str string 
 *@return a boolean check if palindrome or not 
 */
-bool palindrome( string& str);
-#indif /*PALINDROME_H*/
+bool palindrome(const std::string& str);
+#endif /*PALINDROME_H*/

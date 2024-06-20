@@ -2,10 +2,10 @@
 #define PRISME_H
 
 /**
-*@file prisme.h
+*@file prime.h
 *@brief this is a prisme check process!! 
 *@param integer n
 *@return bool the check if is prisme or not 
 */
-bool  prisme(int n);
-#indif /*PRISME_H*/
+bool  prime(int n);
+#endif /*PRISME_H*/

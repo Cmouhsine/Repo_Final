@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libMyProject.a CMakeFiles/MyProject.dir/factorial.cpp.o CMakeFiles/MyProject.dir/fibonacci.cpp.o CMakeFiles/MyProject.dir/palindrome.cpp.o CMakeFiles/MyProject.dir/prime.cpp.o CMakeFiles/MyProject.dir/example_classe.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libMyProject.a

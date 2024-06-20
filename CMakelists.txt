@@ -1,8 +1,19 @@
-cmake_minimum_required(VERSION 3.10)
-project(Final_Prj)
+# Root CMakeLists.txt
 
-add_executable(MyProject main.cpp src/factorial.cpp src/fibonacci.cpp src/prime.cpp src/palindrome.cpp src/example-classe.cpp)
-target_include_directories(Final_Prj PRIVATE include)
+cmake_minimum_required(VERSION 3.10)
+project(MyProject)
+
+# Add the executable
+add_executable(app main.cpp)
+
+# Include directories
+include_directories(include)
+
+# Add the library subdirectory
+add_subdirectory(src)
+
+# Link the library to the executable
+target_link_libraries(app PRIVATE MyProject)
 
 # Tests
 enable_testing()
@@ -22,3 +33,4 @@ if(DOXYGEN_FOUND)
         COMMENT "Generating API documentation with Doxygen"
         VERBATIM)
 endif()
+

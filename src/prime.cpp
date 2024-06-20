@@ -1,5 +1,5 @@
 #include "prime.h"
-
+#include <cmath>
 /**
 *@file prisme.cpp
 *@brief prisme impl function
