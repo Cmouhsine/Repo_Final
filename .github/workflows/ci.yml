@@ -18,10 +18,10 @@ jobs:
           sudo apt-get install -y cmake doxygen
 
       - name: Configure CMake
-        run: cmake -B build
+        run: mkdir build ; cd build ; cmake ..
 
       - name: Build
-        run: cmake --build build
+        run: cmake --build .
 
       - name: Run tests
         run: ctest --test-dir build --output-on-failure
