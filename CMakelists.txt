@@ -1,6 +1,6 @@
 # Root CMakeLists.txt
 #solved name
-cmake_minimum_required(VERSION 3.10)
+#cmake_minimum_required(VERSION 3.10)
 project(MyProject)
 
 # Add the executable
@@ -33,4 +33,3 @@ if(DOXYGEN_FOUND)
         COMMENT "Generating API documentation with Doxygen"
         VERBATIM)
 endif()
-
