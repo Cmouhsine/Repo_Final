@@ -21,7 +21,7 @@ jobs:
         run: |
           mkdir -p build
           cd build
-          cmake ..
+          cmake ${GITHUB_WORKSPACE}
           cmake --build .
       - name: Run tests
         run: ctest --test-dir build --output-on-failure
