@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,34 +17,26 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y cmake doxygen
 
-      - name: Configure CMake and Build
-        run: |
-          cd $GITHUB_WORKSPACE  # Change to the root directory of your repository
-          mkdir -p build
-          cd build
-          cmake ..
-          cmake --build .
+      - name: Configure CMake
+        run: cmake -B build
+
+      - name: Build
+        run: cmake --build build
 
       - name: Run tests
-        run: |
-          cd $GITHUB_WORKSPACE/build
-          ctest --output-on-failure
+        run: ctest --test-dir build --output-on-failure
 
       - name: Generate docs
         if: ${{ success() }}
-        run: |
-          cd $GITHUB_WORKSPACE/build
-          cmake --build . --target doc_doxygen
+        run: cmake --build build --target doc_doxygen
 
       - name: Push generated docs to repository
         if: ${{ success() }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd $GITHUB_WORKSPACE/build
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add docs
           git commit -m "Update Doxygen documentation"
           git push origin main
-
