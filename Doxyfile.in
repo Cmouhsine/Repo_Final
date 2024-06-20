@@ -1,0 +1,8 @@
+PROJECT_NAME           = "MyProject"
+OUTPUT_DIRECTORY       = @CMAKE_SOURCE_DIR@/docs
+INPUT                  = @CMAKE_SOURCE_DIR@/include @CMAKE_SOURCE_DIR@/src @CMAKE_SOURCE_DIR@/main.cpp
+GENERATE_HTML          = YES
+CREATE_SUBDIRS         = YES
+RECURSIVE              = YES
+WARN_LOGFILE           = @CMAKE_CURRENT_SOURCE_DIR@/logs/warn.logs
+USE_MDFILE_AS_MAINPAGE = @CMAKE_SOURCE_DIR@/docs/mainpage.md
