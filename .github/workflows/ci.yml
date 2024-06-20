@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,16 +19,20 @@ jobs:
           sudo apt-get install -y cmake doxygen
 
       - name: Configure CMake
+        working-directory: ${{ github.workspace }}
         run: cmake -B build
 
       - name: Build
+        working-directory: ${{ github.workspace }}
         run: cmake --build build
 
       - name: Run tests
+        working-directory: ${{ github.workspace }}
         run: ctest --test-dir build --output-on-failure
 
       - name: Generate docs
         if: ${{ success() }}
+        working-directory: ${{ github.workspace }}
         run: cmake --build build --target doc_doxygen
 
       - name: Push generated docs to repository
