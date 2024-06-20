@@ -18,39 +18,31 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y cmake doxygen
 
-      - name: Ensure build directory exists
-        run: |
-          mkdir -p $HOME/build
-          cd $HOME/build
-          if [ ! -d "Repo_Final" ]; then
-            cp -R /home/runner/work/Repo_Final/Repo_Final .
-          else
-            echo "Repo_Final directory already exists"
-          fi
-
       - name: Configure CMake and Build
         run: |
-          cd $HOME/build/Repo_Final
-          cmake -B build
-          cmake --build build
+          cd $GITHUB_WORKSPACE  # Change to the root directory of your repository
+          mkdir -p build
+          cd build
+          cmake ..
+          cmake --build .
 
       - name: Run tests
         run: |
-          cd $HOME/build/Repo_Final
-          ctest --test-dir build --output-on-failure
+          cd $GITHUB_WORKSPACE/build
+          ctest --output-on-failure
 
       - name: Generate docs
         if: ${{ success() }}
         run: |
-          cd $HOME/build/Repo_Final
-          cmake --build build --target doc_doxygen
+          cd $GITHUB_WORKSPACE/build
+          cmake --build . --target doc_doxygen
 
       - name: Push generated docs to repository
         if: ${{ success() }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd $HOME/build/Repo_Final
+          cd $GITHUB_WORKSPACE/build
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add docs
