@@ -1,5 +1,0 @@
-FactTest 1 0.20307
-FibTest 1 0.126148
-PalTest 1 0.130865
-PrimeTest 1 0.127677
----
